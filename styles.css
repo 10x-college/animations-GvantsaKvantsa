@@ -1,0 +1,874 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Momo+Signature&family=Playwrite+IN+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Momo+Signature&family=Playwrite+IN+Guides&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    background-color: #050505;
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+
+.line-horizontal {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border-bottom: 2px dashed #262626;
+    z-index: 1;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+    padding: 0 60px;
+    z-index: 2;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.section.center { justify-content: center; }
+.section.right { justify-content: flex-end; }
+
+.line-vertical {
+    height: 50px;
+    border-left: 2px dashed #262626;
+    margin: 0 30px;
+}
+
+.box-vertical {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #050505;
+    top: 90px;
+    margin: 5px;
+}
+
+.nav-links, .action-group {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: rgba(179, 179, 178, 1);
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 12px;
+    border: 2px dashed #262626;
+    background: transparent;
+    transition: all 0.2s ease;
+    font-size: 1.125rem;
+}
+
+.nav-item:hover {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 1.125rem;
+    transition: all 0.2s ease;
+}
+
+.cart-box {
+    padding: 1rem;
+    border: 2px dashed #262626; 
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-box:hover {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.contact-btn {
+    background-color: #a3937d; 
+    color: #000;
+    border: none;
+    padding: 18px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.125rem;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 500;
+}
+
+.contact-btn:hover {
+    background-color: #dd8f1a;
+    transition: background-color 0.2s ease;
+}
+
+.logo-img {
+    display: block;
+}
+
+/*Header finished here*/
+
+.content-wrapper {
+  background-color: #000;
+  padding: 60px 60px 0 60px;
+  color: #fff;
+}
+
+/*Hero starts here */
+
+.hero-stats-grid {
+  max-width: 1596px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-banner-container {
+  position: relative;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  overflow: visible; 
+  z-index: 10;
+  
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 660px;
+  border-radius: 20px 20px 0 0;
+}
+
+.shop-now-wrapper {
+  position: absolute; 
+  left: 50%;
+  transform: translate(-50%, 200%);
+  top: 45%;
+  z-index: 100;
+}
+
+.shop-now-pill {
+  position: relative;
+  background: #050505;
+  color: white;
+  padding: 18px 22px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px dashed #262626;
+  white-space: nowrap;
+}
+
+/* shop now animation */
+.shop-now-pill:hover {
+  background: #050505;
+  border-radius: 12px;
+  border-color: transparent;
+  background-image: linear-gradient(90deg, #a3937d 50%, transparent 50%), 
+                    linear-gradient(90deg, #a3937d 50%, transparent 50%), 
+                    linear-gradient(0deg, #a3937d 50%, transparent 50%), 
+                    linear-gradient(0deg, #a3937d 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+  background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+  animation: move-border 0.4s linear infinite;
+}
+
+@keyframes move-border {
+  from { background-position: 0 0, 100% 100%, 0 100%, 100% 0; }
+  to { background-position: 15px 0, -15px 100%, 0 -15px, 100% 15px; }
+}
+
+.shop-now-pill:hover .button-icon {
+  transform: translate(3px, -3px);
+}
+
+.button-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.button-icon {
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) invert(1);
+}
+
+.shop-now-pill:hover::before {
+  animation: none;
+}
+
+.button-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.shop-now-pill:hover .button-icon {
+  transform: translate(3px, -3px);
+}
+
+.shop-now-pill:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.button-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.stats-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  border: 2px dashed #262626;
+  border-top: none;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.grid-cell {
+  padding: 60px 80px;
+  position: relative;
+}
+
+.brand-intro {
+  grid-row: span 2;
+}
+
+.border-left { border-left: 2px dashed #262626; }
+.border-top { border-top: 2px dashed #262626; }
+
+.tag-outline {
+  padding: 14px 24px;
+  border: 2px dashed #262626;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  margin-right: 8px;
+  color: #888;
+}
+
+.tag-outline:hover {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.main-title {
+  font-size: 48px;
+    margin: 45px 0 30px;
+    line-height: 1.1;
+    font-weight: 500;
+    font-family: "roboto";
+}
+
+.brand-description {
+  color: #888;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "roboto";
+
+}
+
+.stat-number {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 150%;
+  font-family: "roboto";
+}
+
+.stat-label {
+  color: #888;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: "roboto";
+}
+
+.category-tags {
+ padding: 14px 0px;
+}   
+
+/* st main section starts here */
+
+.st-main-layout {
+    color: #ffffff;
+    margin-top: 24px;
+    font-family: "roboto";
+}
+
+.st-outer-frame {
+    max-width: 1596px;
+    margin: 0 auto;
+    border: 2px dashed #262626;
+    border-radius: 20px;
+}
+
+.st-top-header {
+    padding: 80px;
+}
+
+.st-title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: "roboto";
+}
+
+.st-subtitle {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: "roboto";
+}
+
+.st-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.st-card {
+    position: relative;
+    padding: 60px;
+    border: 2px dashed #262626;
+    margin: -1.7px;
+    overflow: hidden;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+.st-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.st-mini-icon {
+    width: 94px;
+    height: 94px;
+}
+
+.st-card-heading {
+    font-family: "roboto";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.st-card-info {
+    color: #888;
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: "roboto";
+}
+
+.st-bg-pen, .st-bg-circles {
+    border: 2px dashed rgba(68, 68, 68, 0.5);
+    border-bottom: none;
+}
+
+.st-card::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 100;
+}
+
+/* თითოეული ქარდის ინდივიდუალური ფონი */
+.st-bg-star::after { background-image: url('./assets/Vector.svg'); }
+.st-bg-circles::after { background-image: url('./assets/Union.svg'); }
+.st-bg-smile::after { background-image: url('./assets/Vector\ \(1\).svg'); }
+.st-bg-trophy::after { background-image: url('./assets/Vector\ \(2\).svg'); }
+.st-bg-pen::after { background-image: url('./assets/Vector\ \(3\).svg'); }
+.st-bg-sun::after { background-image: url('./assets/Union\ \(1\).svg'); }
+
+
+/* collection-section starts here */
+
+.collection-section {
+    color: #ffffff;
+    margin-top: 24px;
+    font-family: "roboto";
+    max-width: 1596px;
+     margin: 0 auto;
+}
+
+.collection-container {
+    margin: 0 auto;
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+}
+
+.collection-header {
+    padding: 80px;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.collection-main-title {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: "Roboto";
+}
+
+.collection-sub-title {
+    color: #666;
+    margin-top: 30px;
+}
+
+.collection-bg-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: url('./assets/Abstract\ Design.svg') no-repeat center right;
+    background-size: contain;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px dashed #333;
+    color: #888;
+    padding: 18px 24px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.filter-btn:hover {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 1.125rem;
+    transition: all 0.2s ease;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.product-card {
+    padding: 30px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.15);
+    border-right: 2px dashed rgba(255, 255, 255, 0.15);
+    margin: -0.5px;
+}
+
+.product-img-wrapper {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.1);
+}
+
+.product-info-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.product-tag {
+    border: 2px dashed #333;
+    color: #777;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: "roboto";
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-tag:hover {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 1.125rem;
+    transition: all 0.2s ease;
+}
+
+.shop-now-btn {
+    border: 2px dashed #333;
+    color: #fff;
+    padding: 18px 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.shop-now-btn:hover {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 1.125rem;
+    transition: all 0.2s ease;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 14px;
+}
+
+.product-details {
+    font-size: 13px;
+    display: flex;
+    gap: 10px;
+}
+
+.detail-label { 
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #555; 
+}
+
+.detail-value { 
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    color: rgba(204, 204, 204, 1); 
+    margin-right: 10px; }
+
+/* faq-section starts here */
+
+.faq-section {
+    color: #ffffff;
+    margin-top: 36px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.faq-outer-container {
+    max-width: 1596px;
+    margin: 0 auto;
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.faq-header {
+    padding: 80px;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.faq-main-title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-family: "roboto";
+}
+
+.faq-sub-title {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 50px;
+    font-family: "roboto";
+}
+
+.faq-decorative-star {
+    width: 350px;
+    height: 350px;
+    background: url('./assets/Clip\ path\ group.svg') no-repeat center right;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.faq-filter-group {
+    display: flex;
+    gap: 12px;
+}
+
+.faq-filter-btn {
+    background: transparent;
+    border: 2px dashed #333;
+    color: #888;
+    padding: 18px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Roboto Mono";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.faq-filter-btn:hover {
+    background-color: #1a1a1a;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 1.125rem;
+    transition: all 0.2s ease;
+}
+
+.faq-questions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.faq-item {
+    padding: 60px;
+    border-right: 2px dashed rgba(255, 255, 255, 0.15);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+}
+
+/* ვაშორებ ბოლო სვეტის მარჯვენა ხაზს */
+.faq-item:nth-child(even) {
+    border-right: none;
+}
+
+/* ვაშორებ ბოლო ორი ელემენტის ქვედა ხაზს */
+.faq-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    font-family: "roboto";
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.faq-question:hover {
+    transform: scale(1.05);
+    color: #dd8f1a;
+}
+
+.faq-answer {
+    color: #888;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: "roboto";
+}
+
+/* sl-footer starts here */
+
+.sl-footer {
+    color: #ffffff;
+    padding: 100px 40px 20px;
+    margin-top: 36px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.15);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+}
+
+.sl-footer-container {
+    max-width: 1596px;
+    margin: 0 auto;
+}
+
+.sl-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.sl-footer-logo span { color: #c9c1b3; }
+
+.sl-social-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.sl-social-icon {
+    background: #e5e5e5;
+    width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    animation: bounceVertical 2s linear infinite;
+}
+
+/* (delay) */
+.sl-social-icon:nth-child(2) { animation-delay: 0.5s; }
+.sl-social-icon:nth-child(3) { animation-delay: 1s; }
+.sl-social-icon:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes bounceVertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* footer starts here */
+
+.sl-bot-section {
+    color: #999;
+    padding: 80px 0 40px 0;
+}
+
+.sl-bot-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 1596px;
+}
+
+.sl-bot-main-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    border-bottom: 2px dashed #262626;
+    margin-bottom: 40px;
+}
+
+.sl-bot-nav-group {
+    display: flex;
+    gap: 100px;
+}
+
+.sl-bot-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-family: "roboto";
+}
+
+.sl-bot-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+}
+
+.sl-bot-list li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    transition: color 0.2s ease;
+}
+
+.sl-bot-list li:not(:last-child)::after {
+    content: "•";
+    margin-left: 16px;
+    color: #333;
+}
+
+.sl-bot-list li a:hover {
+    color: #fff;
+}
+
+.sl-bot-input-box {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    padding: 12px 18px;
+    width: 320px;
+}
+
+.sl-bot-input-field {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    font-family: "roboto Mono";
+}
+
+.sl-bot-submit {
+    background: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+/* ქვედა ტექსტები */
+.sl-bot-info-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.sl-bot-legal a {
+    color: #666;
+    text-decoration: none;
+}
+
+.sl-bot-sep {
+    margin: 0 8px;
+    color: #333;
+}
